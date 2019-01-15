@@ -15,7 +15,7 @@ export class UserPostService {
   ) { }
 
   getUsersPostsList (): Observable<any> {
-    let userPostsUrl = 'http://jsonplaceholder.typicode.com/posts';
+    let userPostsUrl = 'https://jsonplaceholder.typicode.com/posts';
     return this.http.get(userPostsUrl)
       .pipe(
         catchError(e => this.handleError(e))
