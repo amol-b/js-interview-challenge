@@ -1,0 +1,22 @@
+<h1>User Posts </h1>
+<div class="table-responsive">
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" 
+    class="table table-hover table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of userPostsData; let i = index">
+        <td>{{ item.userId }}</td>
+        <td>{{ item.id }}</td>
+        <td>{{ item.title }}</td>
+        <td>{{ item.body }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
